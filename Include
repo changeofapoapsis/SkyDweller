@@ -1,0 +1,46 @@
+#ifndef PAYLOAD_INTEGRATION_H
+#define PAYLOAD_INTEGRATION_H
+
+#include <dji_platform.h>
+#include <dji_payload.h>
+#include <dji_status.h>
+#include <dji_logger.h>
+
+namespace DJI {
+namespace Payload {
+
+// Payload Integration Class
+class PayloadIntegration {
+public:
+    // Constructor and Destructor
+    PayloadIntegration();
+    ~PayloadIntegration();
+
+    // Initialize the payload
+    DjiReturnCode Initialize();
+
+    // Activate and deactivate payload
+    DjiReturnCode Activate();
+    DjiReturnCode Deactivate();
+
+    // Data exchange functions
+    DjiReturnCode SendData(const uint8_t* data, size_t length);
+    DjiReturnCode ReceiveData(uint8_t* buffer, size_t bufferSize);
+
+    // Custom payload functions
+    void SetPayloadStatus(bool isActive);
+    bool IsPayloadActive() const;
+
+private:
+    // Helper methods for payload management
+    DjiReturnCode InitPayloadCallbacks();
+    void ProcessData(const uint8_t* data, size_t length);
+
+    // Payload status
+    bool payloadActive;
+};
+
+} // namespace Payload
+} // namespace DJI
+
+#endif // PAYLOAD_INTEGRATION_H
