@@ -71,7 +71,7 @@ Documentation: In-depth guide and comments in code to assist developers in custo
 Requirements
 
 DJI Payload SDK (PSDK)
-DJI drone compatible with the PSDK, such as the DJI Matrice series
+DJI drone compatible with the PSDK, such as the DJI Fly Cart/Matrice/Mavic series
 Computer with DJI PSDK libraries installed
 Basic knowledge of C++ and hardware integration
 
