@@ -24,6 +24,10 @@ Data Lag:
 If there is data lag, reduce HAL_Delay() in the STM32 main loop to increase the frequency of data updates.
 
 Additional Resources
+
 DJI PSDK Documentation
+https://developer.dji.com/payload-sdk/
+
 STM32 UART HAL Library Documentation
-MaxBotix MB1240 Datasheet: Refer to the datasheet for detailed sensor output specifications and UART format.
+https://www.st.com/resource/en/user_manual/um1725-description-of-stm32f4-hal-and-lowlayer-drivers-stmicroelectronics.pdf
+
