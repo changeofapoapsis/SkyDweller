@@ -1,0 +1,63 @@
+# Set the project name and version
+cmake_minimum_required(VERSION 3.15)
+
+project(DJI_Payload_Integration_V1 VERSION 1.0)
+
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Define the path to the DJI Payload SDK (PSDK) if using an external SDK
+# Modify this path based on where you have the DJI PSDK installed or linked.
+set(DJI_PSDK_PATH "/path/to/dji_psdk")
+
+# Include directories (headers)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include  # Local include files (e.g., your headers)
+    ${DJI_PSDK_PATH}/include     # DJI SDK headers
+)
+
+# Add source files
+set(SOURCES
+    src/main.cpp                  # Main application logic
+    src/ultrasonic_example.cpp     # Ultrasonic sensor example
+    # Add other source files here...
+)
+
+# Add executable
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Set the path for STM32 HAL library if using
+# (Uncomment if you're using STM32CubeIDE or similar)
+# set(STM32_HAL_PATH "/path/to/STM32_HAL")
+
+# Link directories for libraries (modify as per your toolchain)
+link_directories(
+    ${DJI_PSDK_PATH}/lib      # Path to DJI SDK libraries (if necessary)
+    # ${STM32_HAL_PATH}/lib    # Path to STM32 HAL libraries
+)
+
+# Link libraries (you may need to link other libraries depending on your setup)
+target_link_libraries(${PROJECT_NAME}
+    # Add necessary libraries for STM32 HAL, DJI PSDK, etc.
+    # For STM32:
+    # stm32_hal
+    # DJI_SDK (if not linking in another way)
+)
+
+# Optional: Define compile options (if needed)
+target_compile_options(${PROJECT_NAME} PRIVATE 
+    -Wall   # Enable all compiler warnings
+    -O2     # Optimization level 2
+)
+
+# Set up the STM32 toolchain (Modify for your specific STM32 setup)
+# Specify the MCU, linker script, and other toolchain details if using STM32 toolchain
+# Example:
+# set(CMAKE_TOOLCHAIN_FILE "path_to_stm32_toolchain_file.cmake")
+
+# Define the output directory for build artifacts (optional)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build)
+
+# Optional: Debug/Release build type
+set(CMAKE_BUILD_TYPE Release)
