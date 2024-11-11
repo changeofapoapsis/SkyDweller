@@ -10,7 +10,7 @@ DJI Payload SDK (PSDK) Custom Payload Integration
 
 
 
-**Please note the following cannot be integrated into a platform using the provide repository this is sample code for custom payload integration**
+**--Please note the following cannot be integrated into a platform using the provide repository this is sample code for custom payload integration--**
 
 For integrating an ultrasonic sensor with a DJI payload using the DJI PSDK, you’ll want a sensor that provides flexible connectivity options, reliable data output, and ease of interfacing with microcontrollers or embedded systems. Here are some commonly used ultrasonic sensor platforms that work well for this type of integration, especially if they support UART, I2C, or PWM (Pulse Width Modulation) for straightforward data transfer.
 
