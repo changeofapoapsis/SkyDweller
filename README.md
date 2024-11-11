@@ -3,7 +3,7 @@
 
 DJI Payload SDK (PSDK) Custom Payload Integration
 
-assets/images/https://media.giphy.com/media/5tZKwmUKRCfNIHUVz3/giphy.gif?cid=790b76114w7bs4v0iero925q7pjwzij35m83rnq52mro9wih&ep=v1_gifs_search&rid=giphy.gif&ct=g
+![Project Demo](assets/images/project-demo.gif)
 
 **Please note the following cannot be integrated into a platform using the provide repository this is sample code for custom payload integration**
 
