@@ -1,6 +1,10 @@
 # SkyDweller
 
 
+![Project Demo](assets/images/mavic-dji.gif)
+
+
+
 DJI Payload SDK (PSDK) Custom Payload Integration
 
 ![Project Demo](assets/images/wtfpv-rotor-riot-rampage.gif)
