@@ -1,3 +1,17 @@
+Explanation of the Code
+Includes: This file includes several essential DJI PSDK headers, like dji_platform.h, dji_payload.h, dji_status.h, and dji_logger.h, which provide platform, payload, status, and logging utilities from DJI's SDK.
+Namespace: Encapsulates the class in DJI::Payload to organize the integration code.
+
+Class PayloadIntegration: Manages custom payload actions and communication with the DJI drone.
+Constructor/Destructor: The constructor initializes the class, and the destructor handles cleanup.
+Initialization: Initialize sets up the payload with DJI's required configurations.
+Activation and Deactivation: Manages the payload’s active state on the drone.
+Data Exchange: SendData and ReceiveData functions allow custom payloads to send and receive data from the drone.
+Payload Status: Helper functions to set and get the status of the payload, useful for monitoring and control.
+Private Helper Methods: Internal methods for handling callbacks and processing data received from the drone.
+
+___________________________________________________________________________________________________________________
+
 #ifndef PAYLOAD_INTEGRATION_H
 #define PAYLOAD_INTEGRATION_H
 
