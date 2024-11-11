@@ -1,7 +1,5 @@
 # SkyDweller
 
-#GiF
-https://github.com/changeofapoapsis/SkyDweller/blob/main/5tZKwmUKRCfNIHUVz3.webp
 
 DJI Payload SDK (PSDK) Custom Payload Integration
 
