@@ -5,10 +5,6 @@
 
 
 
-DJI Payload SDK (PSDK) Custom Payload Integration
-
-![Project Demo](assets/images/wtfpv-rotor-riot-rampage.gif)
-
 
 
 
@@ -128,24 +124,8 @@ Connect your custom payload hardware to the DJI drone using the appropriate inte
 **3. Running Example Code**
 Build the example payload code:
 
------------------------------------------------------------------------
-
 mkdir build && cd build
-cmake ..
-make
-
------------------------------------------------------------------------
-
 Connect the payload to your DJI drone and start the drone.
-
-
-Check the drone’s remote controller or software interface to confirm that the payload is recognized and operational.
-
-├── examples            # Sample code for custom payload integration
-├── docs                # Documentation for setting up and configuring the payload
-├── src                 # Source code for custom payload logic
-├── **include**         # Header files and PSDK library interfaces
-└── README.md           # Project README file
 
 **Contributing**
 
